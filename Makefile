@@ -25,9 +25,9 @@ clean:
 fmt:
 	$(zig) fmt --ast-check build.zig src/*.zig
 
-.PHONY: github
-github:
-	git push --follow-tags -u github master
+.PHONY: push
+push:
+	git push --follow-tags -u origin master
 
 .PHONY: install
 install:
