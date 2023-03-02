@@ -60,6 +60,7 @@ pub fn main() !void {
     const allocator = arena.allocator();
     const bytes = try stdin.readAllAlloc(allocator, max_stdin_size);
     try decode(stdout, bytes);
+    try stdout.writeByte('\n');
 }
 
 test {
